@@ -8,6 +8,6 @@ notifications:
     recipients:
       - andres.grisalesg@udea.edu.co
 before_script:
-  - chmod a+x gradlew
+  - chmod +x gradlew
 script:
   - ./gradlew build
