@@ -8,7 +8,12 @@ notifications:
   email:
     recipients:
       - andres.grisalesg@udea.edu.co
+addons:
+  sonarcloud:
+    organization: "eplatform-travis-ci"
+    token: $SONAR
 before_install:
   - chmod +x gradlew
 script:
+  - ./gradlew sonarqube
   - ./gradlew clean build

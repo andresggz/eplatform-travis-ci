@@ -6,6 +6,12 @@ plugins {
 	id 'jacoco'
 }
 
+sonarqube{
+	properties {
+		property "sonar.projectKey", "andresggz_eplatform-travis-ci"
+	}
+}
+
 jacocoTestReport {
 	reports {
 		xml.enabled true
