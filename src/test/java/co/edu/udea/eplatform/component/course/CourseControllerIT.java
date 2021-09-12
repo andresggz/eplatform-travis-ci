@@ -4,6 +4,8 @@ import co.edu.udea.eplatform.component.course.io.web.v1.model.CourseSaveRequest;
 import co.edu.udea.eplatform.component.course.model.CourseLevel;
 import co.edu.udea.eplatform.component.course.service.CourseService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.assertj.core.api.Assert;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -111,5 +113,10 @@ public class CourseControllerIT {
                 .contentType("application/json"));
 
         result.andExpect(status().isNotFound());
+    }
+
+    @Test
+    void testWillFailIntentionally(){
+        Assertions.assertThat(3).isEqualTo(5);
     }
 }
