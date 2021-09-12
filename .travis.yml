@@ -10,7 +10,7 @@ notifications:
       - andres.grisalesg@udea.edu.co
 addons:
   sonarcloud:
-    organization: "organization-test-eplatform"
+    organization: "eplatform-travis-ci"
     token: $SONAR
 before_install:
   - chmod +x gradlew
