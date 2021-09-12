@@ -8,7 +8,13 @@ notifications:
   email:
     recipients:
       - andres.grisalesg@udea.edu.co
+addons:
+  sonarcloud:
+    organization: "organization-test-eplatform"
+    token:
+      "9aa7f125fa133968c5358f1554d723250e39a38c"
 before_install:
   - chmod +x gradlew
 script:
+  - ./gradlew sonarqube
   - ./gradlew clean build

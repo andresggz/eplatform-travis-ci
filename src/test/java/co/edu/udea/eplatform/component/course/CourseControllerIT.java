@@ -115,8 +115,8 @@ public class CourseControllerIT {
         result.andExpect(status().isNotFound());
     }
 
-    @Test
+   /* @Test
     void testWillFailIntentionally(){
         Assertions.assertThat(3).isEqualTo(5);
-    }
+    }*/
 }
